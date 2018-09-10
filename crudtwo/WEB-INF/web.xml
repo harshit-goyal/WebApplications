@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+                      http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+  version="3.0"
+  metadata-complete="true">
+
+     <display-name>Servlet and CRUDONE Examples</display-name>
+    <servlet>
+      <servlet-name>AddItem</servlet-name>
+      <servlet-class>com.thinking.machines.inventory.servlets.AddItem</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AddItem</servlet-name>
+        <url-pattern>/addItem</url-pattern>
+  </servlet-mapping>
+    <servlet>
+      <servlet-name>EditItem</servlet-name>
+      <servlet-class>com.thinking.machines.inventory.servlets.EditItem</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>EditItem</servlet-name>
+        <url-pattern>/editItem</url-pattern>
+  </servlet-mapping>
+    <servlet>
+      <servlet-name>UpdateItem</servlet-name>
+      <servlet-class>com.thinking.machines.inventory.servlets.UpdateItem</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UpdateItem</servlet-name>
+        <url-pattern>/updateItem</url-pattern>
+  </servlet-mapping>
+    <servlet>
+      <servlet-name>DeleteItem</servlet-name>
+      <servlet-class>com.thinking.machines.inventory.servlets.DeleteItem</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DeleteItem</servlet-name>
+        <url-pattern>/deleteItem</url-pattern>
+  </servlet-mapping>
+    <servlet>
+      <servlet-name>RemoveItem</servlet-name>
+      <servlet-class>com.thinking.machines.inventory.servlets.RemoveItem</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RemoveItem</servlet-name>
+        <url-pattern>/removeItem</url-pattern>
+  </servlet-mapping>
+    <servlet>
+      <servlet-name>GetItem</servlet-name>
+      <servlet-class>com.thinking.machines.inventory.servlets.GetItem</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>GetItem</servlet-name>
+        <url-pattern>/getItem</url-pattern>
+  </servlet-mapping>
+
+
+</web-app>

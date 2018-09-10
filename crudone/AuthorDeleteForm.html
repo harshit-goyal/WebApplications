@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Whatever Corporation</title>
+<meta name="description" content="The Whatever Corporation">
+<meta name="author" content="Thinking Machines">
+<script>
+function validateForm(frm)
+{
+var name=frm.name.value.trim();
+var nameErrorSection=document.getElementById("nameErrorSection");
+nameErrorSection.innerHTML="";
+if(name.length==0)
+{
+nameErrorSection.innerHTML="Required";
+frm.name.focus();
+return false;
+}
+var validCharacters="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ .";
+var e=0;
+while(e<name.length)
+{ if(validCharacters.indexOf(name.charAt(e))==-1)
+{
+nameErrorSection.innerHTML="Invalid characters in name of author";
+frm.name.focus();
+return false;
+}
+e++;
+}
+return true;
+}
+</script>
+</head>
+<body style='background:#F5F5F5'>
+<div style='background:#DBDBDB;width:100%;border:2px'>
+<table width='100%'>
+<tr>
+<td>
+<img src='/crudone/images/logo.png'><br>
+</td>
+<td align='right' style='padding:5px'>
+<a href='/crudone/'>Home</a>
+</td>
+</table>
+</div>
+<br>
+<br>
+<h2>Delete Author </h2>
+<form action='/crudone/getAuthorForDeletion' onsubmit='return validateForm(this)' method='post'>
+<table border='0'>
+<tr>
+<td>Name of author</td>
+<td>
+<input type='text' name='name' id='name' maxlength='35' size='31'>
+</td>
+</tr>
+<tr>
+<td colspan='2' align='right'>
+<span id='nameErrorSection' style='color:red'>&nbsp;</span>
+</td>
+</tr>
+<tr>
+<td colspan='2' align='center'>
+<button type='submit'>Delete</button>
+</td>
+</tr>
+</table>
+</form>
+<br>
+<br>
+<br>
+<div style='background:#DBDBDB;width:100%;border:2px;padding:10px'>
+<center>
+&copy; Thinking Machines 2017-2040
+</center>
+</div>
+</body>
+</html>
